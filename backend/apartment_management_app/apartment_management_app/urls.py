@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, re_path
 from tenants import views as tenant_views
 from users import views as user_views
+from expense_records import views as expense_views
+from rental_income_records import views as rental_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +28,11 @@ urlpatterns = [
 
     re_path(r'^api/users/$', user_views.users_list),
     re_path(r'^api/users/([0-9])$', user_views.users_detail),
-    re_path(r'^api/users/register', user_views.register_user)
+    re_path(r'^api/users/register$', user_views.register_user),
+
+    re_path(r'^api/expense_records/$', expense_views.expense_records_list),
+    re_path(r'^api/expense_records/([0-9])$', expense_views.expense_records_detail),
+
+    re_path(r'^api/rental_income_records/$', rental_views.rental_income_records_list),
+    re_path(r'^api/rental_income_records/([0-9])$', rental_views.rental_income_records_detail)
 ]

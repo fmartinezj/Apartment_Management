@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Header from "./components/Header";
-
+import Home from "./components/Home";
 import Register from "./pages/register";
 
 class App extends Component {
@@ -10,9 +10,9 @@ class App extends Component {
     // if no go to login
     return (
       <Fragment>
-        {/* <Header /> */}
-        <Register />
-        {/* <Home /> */}
+        <Header />
+        {/* <Register /> */}
+        <Home />
       </Fragment>
     );
   }
