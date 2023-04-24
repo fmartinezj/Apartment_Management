@@ -10,8 +10,8 @@ class App extends Component {
     // if no go to login
     return (
       <Fragment>
-        <Header />
-        {/* <Register /> */}
+        {/* <Header /> */}
+        <Register />
         <Home />
       </Fragment>
     );
