@@ -19,7 +19,7 @@ import { TENANT_URL } from "../constants";
 //     });
 //   };
 // };
-class ConfirmRemovalModal extends Component {
+class ConfirmRemovalTenant extends Component {
   state = {
     modal: false,
   };
@@ -35,7 +35,9 @@ class ConfirmRemovalModal extends Component {
       this.props.resetState();
       this.toggle();
     });
+  };
 
+  render() {
     return (
       <Fragment>
         <Button color="danger" onClick={() => this.toggle()}>
@@ -61,35 +63,7 @@ class ConfirmRemovalModal extends Component {
         </Modal>
       </Fragment>
     );
-  };
-
-  render() {
-    return (
-      <Fragment>
-        <Button color="danger" onClick={() => this.toggle()}>
-          Remove
-        </Button>
-        <Modal isOpen={this.modal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>
-            Do you really wanna delete the tenant?
-          </ModalHeader>
-
-          <ModalFooter>
-            <Button type="button" onClick={() => this.toggle()}>
-              Cancel
-            </Button>
-            <Button
-              type="button"
-              color="primary"
-              onClick={() => this.deleteTenant(this.pk)}
-            >
-              Yes
-            </Button>
-          </ModalFooter>
-        </Modal>
-      </Fragment>
-    );
   }
 }
 
-export default ConfirmRemovalModal;
+export default ConfirmRemovalTenant;

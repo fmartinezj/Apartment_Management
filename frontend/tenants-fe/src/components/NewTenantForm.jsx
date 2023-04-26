@@ -164,7 +164,7 @@ class NewTenantForm extends React.Component {
         <FormGroup>
           <Label for="email">Email:</Label>
           <Input
-            type="text"
+            type="email"
             name="email"
             onChange={this.onChange}
             value={this.defaultIfEmpty(this.state.email)}

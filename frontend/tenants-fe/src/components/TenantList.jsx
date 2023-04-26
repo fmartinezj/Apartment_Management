@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Table } from "reactstrap";
 import NewTenantModal from "./NewTenantModal";
 
-import ConfirmRemovalModal from "./ConfirmRemovalModal";
+import ConfirmRemovalTenant from "./ConfirmRemovalTenant";
 
 // const TenantList = ({ resetState }) => {
 //   const tenants = tenants;
@@ -64,7 +64,7 @@ class TenantList extends Component {
         <tbody>
           {!tenants || tenants.length <= 0 ? (
             <tr>
-              <td colSpan="6" align="center">
+              <td colSpan="7" align="center">
                 <b>Ops, no one here yet</b>
               </td>
             </tr>
@@ -84,7 +84,7 @@ class TenantList extends Component {
                     resetState={this.props.resetState}
                   />
                   &nbsp;&nbsp;
-                  <ConfirmRemovalModal
+                  <ConfirmRemovalTenant
                     pk={tenant.pk}
                     resetState={this.props.resetState}
                   />

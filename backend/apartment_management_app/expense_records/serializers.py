@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Expense_Record
+from .models import ExpenseRecord
 
-class Expense_RecordSerializer(serializers.ModelSerializer):
+class ExpenseRecordSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Expense_Record
-        fields = ('date', 'payee', 'amount', 'budget_category')
+        model = ExpenseRecord 
+        fields = ['pk', 'date', 'payee', 'amount', 'budget_category']
