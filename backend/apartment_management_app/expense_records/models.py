@@ -6,7 +6,10 @@ class ExpenseRecord(models.Model):
     amount = models.FloatField("Amount")
     budget_category = models.CharField("Budget Category", max_length=240)
 
-
+    # @property
+    # def total_amount_mortgage(self):
+    #     if self.budget_category.lower() == "morgage":
+    #         for 
 
     def __str__(self):
         return self.date

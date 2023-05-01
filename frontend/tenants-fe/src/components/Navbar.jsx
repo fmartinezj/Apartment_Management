@@ -12,11 +12,13 @@ export default function Navbar() {
           <a href="/tenant">Tenant List</a>
         </li>
         <li>
-          {" "}
+          <a href="/rentalrecord">Rental Income Records</a>
+        </li>
+        <li>
           <a href="/expenserecord">Expense Records</a>
         </li>
         <li>
-          <a href="/rentalrecord">Rental Income Records</a>
+          <a href="/annualreport">Annual Reports</a>
         </li>
       </ul>
     </nav>

@@ -7,6 +7,7 @@ import ExpenseRecord from "./pages/ExpenseRecord";
 import RentalRecord from "./pages/RentalRecord";
 import Register from "./pages/register";
 import MainMenu from "./pages/MainMenu";
+import AnnualReport from "./pages/AnnualReport";
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,8 +25,9 @@ function App() {
           <Routes>
             <Route exact path="/" element={<MainMenu />} />
             <Route path="/tenant" element={<Tenant />} />
-            <Route path="/expenserecord" element={<ExpenseRecord />} />
             <Route path="/rentalrecord" element={<RentalRecord />} />
+            <Route path="/expenserecord" element={<ExpenseRecord />} />
+            <Route path="/annualreport" element={<AnnualReport />} />
           </Routes>
         </Router>
       </div>

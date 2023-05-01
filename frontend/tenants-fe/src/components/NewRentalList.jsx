@@ -4,9 +4,50 @@ import NewRentalModal from "./NewRentalModal";
 
 import ConfirmRemovalRental from "./ConfirmRemovalRental";
 
+// const TenantList = ({ resetState }) => {
+//   const tenants = tenants;
+//   return (
+//     <Table dark>
+//       <thead>
+//         <tr>
+//           <th>First Name</th>
+//           <th>Last Name</th>
+//           <th>Apartment Number</th>
+//           <th></th>
+//         </tr>
+//       </thead>
+//       <tbody>
+//         {!tenants || tenants.length <= 0 ? (
+//           <tr>
+//             <td colSpan="6" align="center">
+//               <b>Ops, no one here yet</b>
+//             </td>
+//           </tr>
+//         ) : (
+//           tenants.map((tenant) => (
+//             <tr key={tenant.pk}>
+//               <td>{tenant.first_name}</td>
+//               <td>{tenant.last_name}</td>
+//               <td>{tenant.apartment_number}</td>
+//               <td align="center">
+//                 <NewTenantModal
+//                   create={false}
+//                   tenant={tenant}
+//                   resetState={resetState}
+//                 />
+//                 &nbsp;&nbsp;
+//                 <ConfirmRemovalModal pk={tenant.pk} resetState={resetState} />
+//               </td>
+//             </tr>
+//           ))
+//         )}
+//       </tbody>
+//     </Table>
+//   );
+// };
 class RentalList extends Component {
   render() {
-    const rental_records = this.props.rental_records;
+    const rental_income_records = this.props.rental_income_records;
     return (
       <Table dark>
         <thead>
@@ -28,37 +69,37 @@ class RentalList extends Component {
           </tr>
         </thead>
         <tbody>
-          {!rental_records || rental_records.length <= 0 ? (
+          {!rental_income_records || rental_income_records.length <= 0 ? (
             <tr>
               <td colSpan="14" align="center">
                 <b>Ops, no one here yet</b>
               </td>
             </tr>
           ) : (
-            rental_records.map((rental_record) => (
-              <tr key={rental_record.pk}>
-                <td>{rental_record.apartment_number}</td>
-                <td>{rental_record.january}</td>
-                <td>{rental_record.february}</td>
-                <td>{rental_record.march}</td>
-                <td>{rental_record.april}</td>
-                <td>{rental_record.may}</td>
-                <td>{rental_record.june}</td>
-                <td>{rental_record.july}</td>
-                <td>{rental_record.august}</td>
-                <td>{rental_record.september}</td>
-                <td>{rental_record.october}</td>
-                <td>{rental_record.november}</td>
-                <td>{rental_record.december}</td>
+            rental_income_records.map((rental_income_record) => (
+              <tr key={rental_income_record.pk}>
+                <td>{rental_income_record.apartment_number}</td>
+                <td>{rental_income_record.january}</td>
+                <td>{rental_income_record.february}</td>
+                <td>{rental_income_record.march}</td>
+                <td>{rental_income_record.april}</td>
+                <td>{rental_income_record.may}</td>
+                <td>{rental_income_record.june}</td>
+                <td>{rental_income_record.july}</td>
+                <td>{rental_income_record.august}</td>
+                <td>{rental_income_record.september}</td>
+                <td>{rental_income_record.october}</td>
+                <td>{rental_income_record.november}</td>
+                <td>{rental_income_record.december}</td>
                 <td align="center">
                   <NewRentalModal
                     create={false}
-                    rental_record={rental_record}
+                    rental_income_record={rental_income_record}
                     resetState={this.props.resetState}
                   />
                   &nbsp;&nbsp;
                   <ConfirmRemovalRental
-                    pk={rental_record.pk}
+                    pk={rental_income_record.pk}
                     resetState={this.props.resetState}
                   />
                 </td>

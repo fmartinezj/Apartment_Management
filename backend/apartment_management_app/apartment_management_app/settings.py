@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'users',
     'expense_records',
     'rental_income_records'
-]
+    ]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

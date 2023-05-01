@@ -1,29 +1,59 @@
-import React, { Component } from "react";
+import React, { Component, setState } from "react";
 import { Col, Container, Row } from "reactstrap";
-import NewRentalList from "../components/NewRentalList";
+import RentalList from "../components/NewRentalList";
 import NewRentalModal from "../components/NewRentalModal";
 
 import axios from "axios";
 
 import { RENTAL_URL } from "../constants";
 
-class RentalRecord extends Component {
+// const Home = () => {
+//   const [tenants, setTenant] = [];
+
+//   const componentDidMount = () => {
+//     resetState();
+//   };
+
+//   const getTenants = () => {
+//     axios.get(TENANT_URL).then((res) => setState({ tenants: res.data }));
+//   };
+
+//   const resetState = () => {
+//     getTenants();
+//   };
+
+//   return (
+//     <Container style={{ marginTop: "20px" }}>
+//       <Row>
+//         <Col>
+//           <TenantList tenants={setTenant} resetState={resetState} />
+//         </Col>
+//       </Row>
+//       <Row>
+//         <Col>
+//           <NewTenantModal create={true} resetState={resetState} />
+//         </Col>
+//       </Row>
+//     </Container>
+//   );
+// };
+class RenalIncomeRecord extends Component {
   state = {
-    rental_records: [],
+    rental_income_records: [],
   };
 
   componentDidMount() {
     this.resetState();
   }
 
-  getRentalRecords = () => {
+  getRentalIncomeRecords = () => {
     axios
       .get(RENTAL_URL)
-      .then((res) => this.setState({ rental_records: res.data }));
+      .then((res) => this.setState({ rental_income_records: res.data }));
   };
 
   resetState = () => {
-    this.getRentalRecords();
+    this.getRentalIncomeRecords();
   };
 
   render() {
@@ -33,8 +63,8 @@ class RentalRecord extends Component {
         <Container style={{ marginTop: "20px" }}>
           <Row>
             <Col>
-              <NewRentalList
-                rental_records={this.state.rental_records}
+              <RentalList
+                rental_income_records={this.state.rental_income_records}
                 resetState={this.resetState}
               />
             </Col>
@@ -50,4 +80,4 @@ class RentalRecord extends Component {
   }
 }
 
-export default RentalRecord;
+export default RenalIncomeRecord;

@@ -13,10 +13,13 @@ const MainMenu = () => {
           <Link to="/tenant">Tenant</Link>
         </li>
         <li>
+          <Link to="/rentalrecord">Rental Income Record</Link>
+        </li>
+        <li>
           <Link to="/expenserecord">Expense Record</Link>
         </li>
         <li>
-          <Link to="/rentalrecord">Rental Income Record</Link>
+          <Link to="/annualreport">Annual Report</Link>
         </li>
       </ul>
     </div>

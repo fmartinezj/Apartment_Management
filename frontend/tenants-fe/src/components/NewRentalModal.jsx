@@ -43,7 +43,7 @@ class NewRentalModal extends Component {
             <NewRentalForm
               resetState={this.props.resetState}
               toggle={this.toggle}
-              rental_record={this.props.rental_record}
+              rental_income_record={this.props.rental_income_record}
             />
           </ModalBody>
         </Modal>

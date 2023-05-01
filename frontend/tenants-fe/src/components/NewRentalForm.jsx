@@ -1,9 +1,68 @@
-import React from "react";
+import React, { setState, resetState, toggle } from "react";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 
 import axios from "axios";
 
 import { RENTAL_URL } from "../constants";
+
+// const NewTenantForm = ({ tenant }) => {
+//   let state = { pk: 0, first_name: "", last_name: "" };
+
+//   const componentDidMount = () => {
+//     if (tenant) {
+//       const { pk, first_name, last_name } = tenant;
+//       setState({ pk, first_name, last_name });
+//     }
+//   };
+
+//   const onChange = (e) => {
+//     setState({ [e.target.first_name]: e.target.value });
+//   };
+
+//   const createTenant = (e) => {
+//     e.preventDefault();
+//     axios.post(TENANT_URL, state).then(() => {
+//       resetState();
+//       toggle();
+//     });
+//   };
+
+//   const editTenant = (e) => {
+//     e.preventDefault();
+//     axios.put(TENANT_URL + state.pk, state).then(() => {
+//       resetState();
+//       toggle();
+//     });
+//   };
+
+//   const defaultIfEmpty = (value) => {
+//     return value === "" ? "" : value;
+//   };
+
+//   return (
+//     <Form onSubmit={tenant ? editTenant : createTenant}>
+//       <FormGroup>
+//         <Label for="first_name">First Name:</Label>
+//         <Input
+//           type="text"
+//           name="first_name"
+//           onChange={onChange}
+//           value={defaultIfEmpty(state.first_name)}
+//         />
+//       </FormGroup>
+//       <FormGroup>
+//         <Label for="last_name">Last Name:</Label>
+//         <Input
+//           type="text"
+//           name="last_name"
+//           onChange={onChange}
+//           value={defaultIfEmpty(state.last_name)}
+//         />
+//       </FormGroup>
+//       <Button>Send</Button>
+//     </Form>
+//   );
+// };
 
 class NewRentalForm extends React.Component {
   state = {
@@ -21,6 +80,7 @@ class NewRentalForm extends React.Component {
     october: "",
     november: "",
     december: "",
+    total: 0,
   };
 
   componentDidMount() {
@@ -96,10 +156,10 @@ class NewRentalForm extends React.Component {
         <FormGroup>
           <Label for="apartment_number">Apartment Number:</Label>
           <Input
-            type="text"
+            type="number"
             name="apartment_number"
             onChange={this.onChange}
-            value={this.defaultIfEmpty(this.state.apartment_number)}
+            value={this.defaultIfEmpty(this.state.first_name)}
           />
         </FormGroup>
         <FormGroup>
@@ -153,7 +213,7 @@ class NewRentalForm extends React.Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="june">January:</Label>
+          <Label for="june">June:</Label>
           <Input
             type="number"
             step="0.01"
@@ -222,6 +282,7 @@ class NewRentalForm extends React.Component {
             value={this.defaultIfEmpty(this.state.december)}
           />
         </FormGroup>
+
         <Button>Send</Button>
       </Form>
     );

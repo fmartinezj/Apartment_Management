@@ -4,7 +4,48 @@ import NewExpenseModal from "./NewExpenseModal";
 
 import ConfirmRemovalExpense from "./ConfirmRemovalExpense";
 
-class ExpenseRecordList extends Component {
+// const TenantList = ({ resetState }) => {
+//   const tenants = tenants;
+//   return (
+//     <Table dark>
+//       <thead>
+//         <tr>
+//           <th>First Name</th>
+//           <th>Last Name</th>
+//           <th>Apartment Number</th>
+//           <th></th>
+//         </tr>
+//       </thead>
+//       <tbody>
+//         {!tenants || tenants.length <= 0 ? (
+//           <tr>
+//             <td colSpan="6" align="center">
+//               <b>Ops, no one here yet</b>
+//             </td>
+//           </tr>
+//         ) : (
+//           tenants.map((tenant) => (
+//             <tr key={tenant.pk}>
+//               <td>{tenant.first_name}</td>
+//               <td>{tenant.last_name}</td>
+//               <td>{tenant.apartment_number}</td>
+//               <td align="center">
+//                 <NewTenantModal
+//                   create={false}
+//                   tenant={tenant}
+//                   resetState={resetState}
+//                 />
+//                 &nbsp;&nbsp;
+//                 <ConfirmRemovalModal pk={tenant.pk} resetState={resetState} />
+//               </td>
+//             </tr>
+//           ))
+//         )}
+//       </tbody>
+//     </Table>
+//   );
+// };
+class ExpenseList extends Component {
   render() {
     const expense_records = this.props.expense_records;
     return (
@@ -21,7 +62,7 @@ class ExpenseRecordList extends Component {
         <tbody>
           {!expense_records || expense_records.length <= 0 ? (
             <tr>
-              <td colSpan="6" align="center">
+              <td colSpan="7" align="center">
                 <b>Ops, no one here yet</b>
               </td>
             </tr>
@@ -32,7 +73,6 @@ class ExpenseRecordList extends Component {
                 <td>{expense_record.payee}</td>
                 <td>{expense_record.amount}</td>
                 <td>{expense_record.budget_category}</td>
-                <td>{expense_record.registrationDate}</td>
                 <td align="center">
                   <NewExpenseModal
                     create={false}
@@ -54,4 +94,4 @@ class ExpenseRecordList extends Component {
   }
 }
 
-export default ExpenseRecordList;
+export default ExpenseList;

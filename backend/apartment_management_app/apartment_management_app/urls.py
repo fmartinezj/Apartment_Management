@@ -20,6 +20,7 @@ from tenants import views as tenant_views
 from users import views as user_views
 from expense_records import views as expense_views
 from rental_income_records import views as rental_views
+# from annual_summaries import views as annual_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,7 +33,11 @@ urlpatterns = [
 
     re_path(r'^api/expense_records/$', expense_views.expense_records_list),
     re_path(r'^api/expense_records/([0-9])$', expense_views.expense_records_detail),
+    re_path(r'^api/expense_records_summary/$', expense_views.expense_records_summary),
 
-    re_path(r'^api/rental_income_records/$', rental_views.rental_income_records_list),
-    re_path(r'^api/rental_income_records/([0-9])$', rental_views.rental_income_records_detail)
+
+    re_path(r'^api/rental_income_records/$', rental_views.rental_records_list),
+    re_path(r'^api/rental_income_records/([0-9])$', rental_views.rental_records_detail),
+    re_path(r'^api/rental_income_records_summary/$', rental_views.rental_records_summary),
+
 ]

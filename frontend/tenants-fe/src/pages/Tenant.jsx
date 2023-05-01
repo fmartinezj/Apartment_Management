@@ -57,7 +57,7 @@ class Tenant extends Component {
   render() {
     return (
       <div>
-        <h1>Tenant Page</h1>
+        <h1>Tenant List</h1>
         <Container style={{ marginTop: "20px" }}>
           <Row>
             <Col>
