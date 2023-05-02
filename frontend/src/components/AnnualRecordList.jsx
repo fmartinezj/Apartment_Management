@@ -21,7 +21,7 @@ class AnnualRecordList extends Component {
             <tbody>
               {!expense_records || expense_records.length <= 0 ? (
                 <tr>
-                  <td colSpan="4" align="center">
+                  <td colSpan="3" align="center">
                     <b>Ops, no one here yet</b>
                   </td>
                 </tr>
@@ -30,6 +30,7 @@ class AnnualRecordList extends Component {
                   <tr key={expense_record.budget_category}>
                     <td>{expense_record.budget_category}</td>
                     <td>{expense_record.amount}</td>
+                    <td></td>
                   </tr>
                 ))
               )}
@@ -40,20 +41,21 @@ class AnnualRecordList extends Component {
           <Table dark>
             <thead align="center">
               <tr>
-                <th>Total Rent</th>
+                <th align="center">Total Rent</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
               {rental_income_records.total <= 0 ? (
                 <tr>
-                  <td colSpan="2" align="center">
+                  <td colSpan="3" align="center">
                     <b>Ops, no one here yet</b>
                   </td>
                 </tr>
               ) : (
                 <tr key={rental_income_records.total}>
-                  <td>{rental_income_records.total}</td>
+                  <td align="center">{rental_income_records.total}</td>
+                  <td></td>
                 </tr>
               )}
             </tbody>

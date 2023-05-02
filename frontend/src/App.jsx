@@ -1,19 +1,12 @@
 import "./App.css";
 import ReactDOM from "react-dom/client";
-import React, { Component, Fragment } from "react";
-import Header from "./components/Header";
+import React from "react";
 import Tenant from "./pages/Tenant";
 import ExpenseRecord from "./pages/ExpenseRecord";
 import RentalRecord from "./pages/RentalRecord";
-import Register from "./pages/register";
 import MainMenu from "./pages/MainMenu";
 import AnnualReport from "./pages/AnnualReport";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 function App() {

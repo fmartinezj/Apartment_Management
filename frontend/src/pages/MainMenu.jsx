@@ -1,5 +1,4 @@
 import React from "react";
-// import Tenant from "./components/Tenant.";
 import "./mainmenu.css";
 import { Link } from "react-router-dom";
 

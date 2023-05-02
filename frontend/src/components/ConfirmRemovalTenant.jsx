@@ -1,24 +1,10 @@
-import React, { Component, Fragment, useState } from "react";
+import React, { Component, Fragment } from "react";
 import { Modal, ModalHeader, Button, ModalFooter } from "reactstrap";
 
 import axios from "axios";
 
 import { TENANT_URL } from "../constants";
 
-// const ConfirmRemovalModal = ({ resetState, pk }) => {
-//   const [modal, setModal] = useState(false);
-
-//   const toggle = () => {
-//     setModal(!modal);
-//   };
-
-//   const deleteTenant = (pk) => {
-//     axios.delete(TENANT_URL + pk).then(() => {
-//       resetState();
-//       toggle();
-//     });
-//   };
-// };
 class ConfirmRemovalTenant extends Component {
   state = {
     modal: false,

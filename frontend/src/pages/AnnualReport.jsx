@@ -6,8 +6,6 @@ import axios from "axios";
 
 import { EXPENSE_SUM_URL, RENTAL_SUM_URL } from "../constants";
 
-import { Link } from "react-router-dom";
-
 class AnnualReport extends Component {
   state = {
     expense_records: [],
@@ -34,17 +32,20 @@ class AnnualReport extends Component {
   render() {
     console.log(this.state.rental_income_records);
     return (
-      <Container style={{ marginTop: "20px" }}>
-        <Row>
-          <Col>
-            <AnnualRecordList
-              expense_records={this.state.expense_records}
-              rental_income_records={this.state.rental_income_records}
-              resetState={this.resetState}
-            />
-          </Col>
-        </Row>
-      </Container>
+      <div>
+        <h1>Annual Records</h1>
+        <Container style={{ marginTop: "20px" }}>
+          <Row>
+            <Col>
+              <AnnualRecordList
+                expense_records={this.state.expense_records}
+                rental_income_records={this.state.rental_income_records}
+                resetState={this.resetState}
+              />
+            </Col>
+          </Row>
+        </Container>
+      </div>
     );
   }
 }
