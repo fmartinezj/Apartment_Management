@@ -7,13 +7,13 @@
 
 # Using Django
 
-Run server: `python3 manage.py runserver`
-Make Migration: `python3 manage.py makemigrations`
-Migrate to Database: `python3 manage.py migrations`
-Inspect Database: `python3 manage.py inspectdb`
-Open Database Shell: `python3 manage.py shelldb`
-Clear Database Items: `python3 manage.py flush`
+1. Run server: `python3 manage.py runserver`
+2. Make Migration: `python3 manage.py makemigrations`
+3. Migrate to Database: `python3 manage.py migrations`
+4. Inspect Database: `python3 manage.py inspectdb`
+5. Open Database Shell: `python3 manage.py shelldb`
+6. Clear Database Items: `python3 manage.py flush`
 
 # Starting Postgres
 
-Run command: `sudo service postgresql start`
+1. Run command: `sudo service postgresql start`
