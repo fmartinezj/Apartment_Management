@@ -48,6 +48,7 @@ import ConfirmRemovalRental from "./ConfirmRemovalRental";
 class RentalList extends Component {
   render() {
     const rental_income_records = this.props.rental_income_records;
+    console.log(rental_income_records);
     return (
       <Table dark>
         <thead>

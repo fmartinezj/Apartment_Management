@@ -100,6 +100,7 @@ class NewRentalForm extends React.Component {
         october,
         november,
         december,
+        total
       } = this.props.rental_record;
       this.setState({
         pk,
